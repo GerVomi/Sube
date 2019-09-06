@@ -66,10 +66,11 @@ public class Sube {
 	//metodo viajar
 	public void viajar(double Saldo, double tarifa) {
 		
-	if(saldo >this.getsNegativo()) {
+	if(saldo >this.getsNegativo()) {  /* NO SE SI TENDRA ALGO QUE VER, PERO NO USE GETTERS NI SETTERS.
+	Y EN LA PARTE DE LA RESTA DEL (SALDO - TARIFA) LA HICE ANTES DEL 'IF'. FUE LA UNICA FORMA EN LA QUE ME DIO BIEN LA RESTA, 
+	TENIENDO EN CUENTA EL SALDO EN NEGATIVO*/					
+		this.setSaldo(saldo=this.getSaldo()-tarifa);// SERIA ESTA PARTE, LA PUSE ANTES DEL IF.
 		
-		
-		this.setSaldo(saldo=this.getSaldo()-tarifa);
 		System.out.println("buen viaje");
 		System.out.println("su saldo es : "+saldo);
 	}
